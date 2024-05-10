@@ -12,9 +12,9 @@ architecture Behavioral of twoscomp_decimal_tb is
 
     component twoscomp_decimal is
         port (
-            i_binary: in std_logic_vector(7 downto 0);
-            o_negative: out std_logic;
-            o_hundreds: out std_logic_vector(3 downto 0);
+            i_bin: in std_logic_vector(7 downto 0);
+            o_neg: out std_logic;
+            o_hund: out std_logic_vector(3 downto 0);
             o_tens: out std_logic_vector(3 downto 0);
             o_ones: out std_logic_vector(3 downto 0)
         );
@@ -30,9 +30,9 @@ begin
 
     uut: entity work.twoscomp_decimal
         port map (
-            i_binary => w_binary,
-            o_negative => w_negative,
-            o_hundreds => w_hundreds,
+            i_bin => w_binary,
+            o_neg => w_negative,
+            o_hund => w_hundreds,
             o_tens => w_tens,
             o_ones => w_ones
         );
