@@ -187,6 +187,6 @@ begin
     w_adv <= btnC;       
 	         
     led(3 downto 0) <= w_cycle;
-    led(11 downto 4) <= w_bin;
+    led(11 downto 4) <= w_result;
 	
 end top_basys3_arch;

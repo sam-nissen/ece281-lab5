@@ -123,7 +123,8 @@ begin
 	         w_lshift when i_op(1 downto 0) = "11";
 	w_result <= w_mux when i_op(2) = '0' else
 	            w_addsub when i_op(2) = '1';
-	o_flag(3) <= '1' when w_result(7) = '1';
+	o_flag(3) <= '1' when w_result(7) = '1' else '0';
+	o_flag(1) <= '1' when w_result = "00000000" else '0';
 	o_result <= w_result;
 	
 end behavioral;
